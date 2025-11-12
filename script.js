@@ -1,28 +1,29 @@
-//complete this code
 class Rectangle {
 	constructor(width, height){
 		this._width = width;
 		this._height = height;
 	}
-		get width() {
+
+	get width() {
 		return this._width;
-		}
-		get height() {
+	}
+
+	get height() {
 		return this._height;
-		}
+	}
 
 	getArea(){
-		return this. width * this.height;
+		return this.width * this.height;
 	}
-	
 }
 
 class Square extends Rectangle {
 	constructor(side){
-		super(side, side);
+		super(side, side); // use Rectangle's constructor
 	}
+
 	getPerimeter(){
-		return 4 * this.side ;
+		return 4 * this.width; // use inherited property
 	}
 }
 
